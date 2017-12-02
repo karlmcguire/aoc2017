@@ -7,7 +7,7 @@ function checksum (s)
     l:gsub("%w+", function(n)
       num = tonumber(n)
       max = (num > max and num or max)
-      min = (((num < min) or first) and num or min)
+      min = (((num < min) or ini) and num or min)
       ini = false 
     end)
     sum = sum + (max - min)
